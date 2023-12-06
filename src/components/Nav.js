@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/icons/logo.svg';
 const Nav = () => {
     return (
-        <header>
+        <>
             <div className="container">
                 <div className="header-wrap">
                     <div className="nav-logo"><img src={logo} alt="Little Lemon Logo"></img>
@@ -20,7 +20,7 @@ const Nav = () => {
             </div>
             </div>
 
-        </header>
+        </>
     );
 }
 
