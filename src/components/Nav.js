@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from '../assets/icons/logo.svg';
+import {Link} from "react-router-dom"
+import BookingPage from '../pages/BookingPage';
+
+
 const Nav = () => {
     return (
         <>
-            <div className="container">
-                <div className="header-wrap">
-                    <div className="nav-logo"><img src={logo} alt="Little Lemon Logo"></img>
-                    </div>
-                    <div className="nav-menu">
+            <div className="nav-menu">
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/">About</a></li>
-                            <li><a href="/">Menu</a></li>
-                            <li><a href="/">Reservations</a></li>
-                            <li><a href="/">Order</a></li>
-                            <li><a href="/">Log In</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/">About</Link></li>
+                            <li><Link to="/">Menu</Link></li>
+                            <li><Link to="/booking" element={<BookingPage />}>Reservations</Link></li>
+                            <li><Link to="/">Order</Link></li>
+                            <li><Link to="/">Log In</Link></li>
                         </ul>
                     </div>
-            </div>
-            </div>
+
 
         </>
     );
