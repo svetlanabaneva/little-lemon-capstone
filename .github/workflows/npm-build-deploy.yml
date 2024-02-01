@@ -2,7 +2,7 @@ name: Deploy website on push
 run-name: ${{ github.actor }} is creating a new build
 on: [push]
 env:
-  process.env.CI: false
+  CI: ""
 jobs:
   web-deploy:
     name: Checkout repo
