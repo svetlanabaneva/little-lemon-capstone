@@ -44,7 +44,7 @@ h1,h2,h3 {
 
 .container {
   margin: 0 auto;
-  max-width: 72.5rem;
+  max-width: 70rem;
   padding:0 1.5rem ;
   position:relative;
 
@@ -61,14 +61,11 @@ width: 13rem;
 }
 .nav-menu  {
   display: flex;
-
   font-weight: 700;
 }
 .nav-menu ul {
   display: flex;
-
   align-items: center;
-
   gap:1rem;
 }
 .nav-menu ul li {
@@ -93,26 +90,14 @@ width: 13rem;
     list-style-type: none;
   }
 
-  @media only screen and (max-width: 800px) {
-    header {
-      .header-wrap {
-        .nav-menu {
-gap: 10px;
+  @media only screen and (max-width: 880px) {
 
-        }
-      }
-    }
-  }
-  @media only screen and (max-width: 749px) {
-    header {
       .header-wrap {
         .nav-menu {
-          flex: 0 0 auto;
-        margin-right: 20px;
+          display: none;
         }
       }
     }
-  }
   
 /********************************/
 /*HERO SECTION HERO:JS*/

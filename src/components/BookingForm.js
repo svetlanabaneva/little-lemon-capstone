@@ -16,16 +16,13 @@ const BookingForm = (props) => {
     const [finalTime, setFinalTime] = useState(
         props.availableTimes.map((times) => <option>{times}</option>)
       );
-    
+
       function handleDateChange(e) {
         setDate(e.target.value);
-    
         var stringify = e.target.value;
         const date = new Date(stringify);
-    
         props.updateTimes(date);
-    
-        setFinalTime(props.availableTimes.map((times) => <option>{times}</option>));
+            setFinalTime(props.availableTimes.map((times) => <option>{times}</option>));
       }
     return (
     <main>
@@ -36,17 +33,16 @@ const BookingForm = (props) => {
                         <h2>Reservation Details</h2>
                         <form >
                             <section className="booking-details">
-                                <label htmlFor="time">Choose Time</label>
-                                <select id="time" required>
-                                {finalTime}
-                                </select>
-                                <label htmlFor="date">Date</label>
+                            <label htmlFor="date">Date</label>
                                 <input type="date" 
                                 name="date" 
                                 id="date"
                                 value={date}
                                 onChange={handleDateChange} required />
-
+                                <label htmlFor="time">Choose Time</label>
+                                <select id="time" required>
+                                {finalTime}
+                                </select>
                                 <label htmlFor="number">No.of Guests</label>
                                 <input type="number" 
                                     name="number" 
@@ -69,8 +65,7 @@ const BookingForm = (props) => {
                             <section className="booking-details">
                                     <label htmlFor="fullName" >Full Name</label>
                                     <input type="text" placeholder="Full Name" name="name"
-                                    onChange={(e) => setNumber(e.target.value)} required />
-                                   
+                                    onChange={(e) => setFullName(e.target.value)} required />
                                     <label htmlFor="email">E-Mail</label>
                                     <input type="email" 
                                            name="email" 
