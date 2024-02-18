@@ -32,8 +32,10 @@ const submitAPI = function(formData) {
   return true;
 };
 
-
 function App() {
+
+
+
   const initialState = {availableTimes:  fetchAPI(new Date())}
   const [state, dispatch] = useReducer(updateTimes, initialState);
 

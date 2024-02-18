@@ -3,11 +3,14 @@ import { useState } from 'react';
 import restaurant from "../assets/images/restaurant.jpg";
 
 const BookingForm = (props) => {
+
     const [date, setDate] = useState ("");
     const [times, setTimes] = useState("")
     const [number, setNumber] = useState ("");
     const [occasion, setOccasion] = useState ("");
-    const [fullName, setFullName] = useState ("");
+
+    const [fullName, setFullName] = useState("")
+
     const [email, setEmail] = useState ("");
 
     const handleSubmit = (e) => {
@@ -103,7 +106,7 @@ const BookingForm = (props) => {
                                         id="mobile"
                                         minLength="5"
                                         maxLength="10"
-                                        placeholder="(+312) Mobile Number"
+                                        placeholder="Mobile Number"
                                         required
                                     />
                                     <label htmlFor="request">Special Requests</label>
