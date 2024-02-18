@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import restaurant from "../assets/images/restaurant.jpg";
 
-
 const BookingForm = (props) => {
     const [date, setDate] = useState ("");
     const [times, setTimes] = useState("")
@@ -13,7 +12,7 @@ const BookingForm = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.submitForm(e);
+        console.log(props.submitForm(e));
         };
 
     const handleChange = (e) => {
