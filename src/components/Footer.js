@@ -1,8 +1,6 @@
 import React from 'react';
 import secLogo from '../assets/icons/secondary_logo2.png';
 
-
-
 const Footer = () => {
     return (
         <footer className="footer">

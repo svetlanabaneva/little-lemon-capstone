@@ -1,3 +1,4 @@
+
 const seededRandom = function (seed) {
   var m = 2 ** 35 - 31;
   var a = 185852;
@@ -7,13 +8,10 @@ const seededRandom = function (seed) {
   };
 };
 
-export function fetchAPI(date) {
+const fetchAPI = function(date) {
   let result = [];
-  let dt = new Date(date);
-  let seed = dt.getDate();
-
-  let random = seededRandom(seed);
-  for (let i = 17; i <= 23; i++) {
+  let random = seededRandom(date.getDate());
+  for (let i = 17; i <= 22; i++) {
     if (random() < 0.5) {
       result.push(i + ":00");
     }
@@ -23,7 +21,6 @@ export function fetchAPI(date) {
   }
   return result;
 }
-
-export function submitAPI(formData) {
+const submitAPI = function(formData) {
   return true;
-}
+};
