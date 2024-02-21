@@ -15,7 +15,7 @@ const BookingForm = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(props.submitForm(e));
+        props.submitForm(e);
         };
 
     const handleChange = (e) => {
